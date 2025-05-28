@@ -74,4 +74,8 @@ resource "google_container_node_pool" "primary_nodes" {
     auto_repair  = true
     auto_upgrade = true
   }
+  autoscaling {
+    min_node_count = 1
+    max_node_count = 3
+  }
 }
