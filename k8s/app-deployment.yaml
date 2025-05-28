@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: python-container
-          image: us-central1-docker.pkg.dev/elated-bus-460108-d0/salma-repository/salma-python
+          image: us-central1-docker.pkg.dev/elated-bus-460108-d0/salma-repository/python-app
           ports:
             - containerPort: 8000
           resources:
