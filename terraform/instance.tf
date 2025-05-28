@@ -8,9 +8,12 @@ resource "google_service_account" "vm-sa" {
 
 resource "google_project_iam_member" "vm_sa_roles" {
   for_each = toset([
+    "roles/container.developer",
     "roles/container.clusterAdmin",
-    "roles/artifactregistry.admin"
+    "roles/artifactregistry.admin",
+    "roles/iam.serviceAccountUser"
   ])
+  
 
   project = var.project_id
   role    = each.key
